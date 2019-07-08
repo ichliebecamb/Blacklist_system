@@ -72,7 +72,7 @@ void Database::deleteBlack(string id)
 	}
 }
 
-bool Database::selectBlack(string id)
+void Database::selectBlack(string id)
 {
 	Blacklist* B_ptem = BlackListHead->B_next;
 	while ( B_ptem !=NULL && id != B_ptem->B_id )
@@ -81,11 +81,11 @@ bool Database::selectBlack(string id)
 	}
 	if (NULL == B_ptem)
 	{
-		return false;
+		std::cout << "not Found !" << std::endl;
 	}
 	else
 	{
-		return true;
+		showBlack(B_ptem);
 	}
 }
 

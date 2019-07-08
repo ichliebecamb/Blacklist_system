@@ -37,7 +37,7 @@ public:
 	void AddBlack();
 
 	void deleteBlack(string id);
-	bool selectBlack(string id);
+	void selectBlack(string id);
 	bool selectBlack(string id, Blacklist* & BN);
 	void changeBlack(string id);
 	void showBlack(Blacklist * BN);
